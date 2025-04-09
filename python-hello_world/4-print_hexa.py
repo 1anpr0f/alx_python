@@ -1,1 +1,2 @@
-print("{}".format(", ".join("{:02}".format(i) for i in range(100))))
+for i in range(99):
+    print("{} = {}".format(1,hex(i)))
