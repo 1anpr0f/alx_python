@@ -1,2 +1,6 @@
 def convert_to_celsius(fahrenheit):
-    return (5/9) * (fahrenheit-32)
+    celsius = (5/9) * (fahrenheit-32)
+    if celsius == -celsius:
+        return round(celsius,2)
+    else:
+        return celsius
