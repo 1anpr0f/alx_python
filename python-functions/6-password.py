@@ -3,7 +3,7 @@
 def validate_password(password):
     if len(password) < 8:
         return False
-    elif len(password) > 8:
+    elif len(password) >= 8:
         for i in password:
             if i.islower():
                 return False
