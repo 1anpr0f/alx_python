@@ -3,5 +3,5 @@ def fibonacci_sequence(n):
     b = 1
     for _ in range(n):
         a,b = b,a+b
-    return a
+        return list(a)
     
