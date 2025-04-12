@@ -1,18 +1,17 @@
 
 def validate_password(password):
-    if len(password) < 8:
-        return False
     has_space = False
     has_upper = False
-    
-    for i in password:
-        if i.isupper():
-            has_upper=True
-        if i == " ":
-            has_space = True
-    if has_upper and not has_space:
+    if len(password) < 8:
         return False
-    else:
-        return True
-    
+    elif len(password) >= 8:
+           for i in password:
+               if i.isupper():
+                   has_upper=True
+               if i == " ":
+                   has_space = True
+           if has_upper and not has_space:
+               return True
+           else:
+               return False
   
