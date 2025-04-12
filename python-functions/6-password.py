@@ -4,7 +4,7 @@ def validate_password(password):
     has_upper = False
     if len(password) < 8:
         return False
-    elif len(password) >= 8:
+    elif len(password) > 8:
            for i in password:
                if i.isupper():
                    has_upper=True
