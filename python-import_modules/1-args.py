@@ -11,7 +11,6 @@ def main():
     for i,arg in enumerate(argv,start=1):
         if arg == "ALX":
             arg = "Holberton"
-        else:
-            print("{}: {}".format(i,arg))
+        print("{}: {}".format(i,arg))
 if __name__ == "__main__":
     main()
