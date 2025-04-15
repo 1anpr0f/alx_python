@@ -1,6 +1,9 @@
-def number(*argv):
-    print("{} arguments:".format(len(argv)))
-    for i,k in enumerate(argv,start=1):
-        print("{}:{}".format(i,k))
+import sys
+def main():
+    argv = sys.argv[1:]
+    count = len(argv)
+    print("{} arguments:".format(count))
+    for i,arg in enumerate(argv,start=1):
+        print("{}:{}".format(i,arg))
 if __name__ == "__main__":
-    number()
+    main()
