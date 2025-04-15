@@ -21,4 +21,4 @@ def validate_password(password):
     if has_upper and has_lower and has_digit and not has_space:
         return True
     else:
-        return False                    
+        return False                              

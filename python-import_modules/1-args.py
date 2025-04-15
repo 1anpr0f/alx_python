@@ -9,6 +9,9 @@ def main():
     else:
         print("{} arguments:".format(count))   
     for i,arg in enumerate(argv,start=1):
-        print("{}: {}".format(i,arg))
+        if arg == "ALX":
+            arg = "Holberton"
+        else:
+            print("{}: {}".format(i,arg))
 if __name__ == "__main__":
     main()
