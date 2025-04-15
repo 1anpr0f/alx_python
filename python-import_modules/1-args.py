@@ -5,7 +5,7 @@ def main():
     if count == 1:
         print("{} argument:".format(count))
     elif count == 0:
-        print("{} arguments:".format(count))
+        print("{} arguments.".format(count))
     else:
         print("{} arguments:".format(count))   
     for i,arg in enumerate(argv,start=1):
