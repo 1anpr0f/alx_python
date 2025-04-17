@@ -4,5 +4,5 @@ def no_c(my_string):
         for j in i:
             if j != "c":
                 new+=i
-        return new 
-    return my_string
+    return "{} \n {}" .format(new,my_string)
+    
