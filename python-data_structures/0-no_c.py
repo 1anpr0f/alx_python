@@ -4,5 +4,5 @@ def no_c(my_string):
         for j in i:
             if j != "c":
                 new+=i
-    print( new) 
-    print( my_string)
+        return new 
+    return my_string
