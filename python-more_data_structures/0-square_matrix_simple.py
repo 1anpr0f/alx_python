@@ -1,6 +1,5 @@
 def square_matrix_simple(matrix=[]):
     for i in matrix:
-        i = []
         for  j in i:
            i.append(j)
            ", ".join(i)
