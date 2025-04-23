@@ -1,7 +1,7 @@
 def square_matrix_simple(matrix=[]):
     for i in matrix:
-        for j in i:
-            print("{:d}".format(j), end=", " else end="")
-        sqr =list(map(lambda x:x**2,i))
-        print(sqr) 
+        for  k,j in i:
+            print("{:d}".format(j**2), end=", " if k < len(i)-1 else end="")
+        print()
+
             
