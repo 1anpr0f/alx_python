@@ -1,8 +1,9 @@
 def square_matrix_simple(matrix=[]):
-    for new_row in matrix:
-        new_row = [x**2 for x in new_row]
-        matrix.append(new_row)
-    return matrix
+    new_list = []
+    for i in matrix:
+        new_row = [x**2 for x in i]
+        new_list.append(new_row)
+    return new_list
     
 
   
