@@ -5,4 +5,4 @@ def square_matrix_simple(matrix=[]):
         print(map(lambda x:x**2,i))
         print()
 
-            
+  
