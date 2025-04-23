@@ -3,5 +3,6 @@ def square_matrix_simple(matrix=[]):
         for  j in i:
             print("{:d}".format(j**2),end=", " if j !=i[-1] else "")
         print()
+    print()
 
   
