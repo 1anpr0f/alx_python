@@ -54,3 +54,9 @@ class Square:
             int: The area of the square (size squared).
         """
         return self.__size ** 2
+    def my_print(self):
+        if self.__size == 0 :
+            print()
+        else:
+            for _ in self.__size:
+                print("{}".format('#'*self.__size))
