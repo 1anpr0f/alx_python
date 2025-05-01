@@ -4,17 +4,13 @@
 
 def is_kind_of_class(obj, a_class):
     """
-    Return True if obj is an instance of a subclass of a_class.
-
-    The function returns True only if obj is an instance of a class that
-    inherits from a_class (directly or indirectly), but not if obj is a direct
-    instance of a_class itself.
+    Return True if the object is an instance of, or inherits from, the specified class.
 
     Args:
         obj: The object to check.
-        a_class: The reference class.
+        a_class: The class to compare against.
 
     Returns:
-        bool: True if obj is an instance of a subclass of a_class, else False.
+        bool: True if obj is an instance of a_class or its subclass, False otherwise.
     """
-    return isinstance(obj, a_class) and type(obj) is not a_class
+    return isinstance(obj, a_class)
