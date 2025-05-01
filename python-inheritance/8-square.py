@@ -5,7 +5,6 @@ with open('7-rectangle.py','r') as file:
 class Square(Rectangle):
     """square inherits from rectangle"""
     def __init__(self, size):
-        super().__init__(size)
         self.integer_validator("size",size)
         self.__size=size
     def area(self):
