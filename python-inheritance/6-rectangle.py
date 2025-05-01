@@ -1,9 +1,5 @@
 """read the file from 5-base_geometry.py"""
-namespace={}
-with open('5-base_geometry.py','r') as file:
-    code=file.read()
-    exec(code,namespace)
-BaseGeometry=namespace['BaseGeometry']
+BaseGeometry=__import__('5-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """Represents a rectangle, inherits from BaseGeometry."""
