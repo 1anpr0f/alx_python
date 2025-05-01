@@ -1,5 +1,5 @@
 """read the file from 5-base_geometry.py"""
-with open('5-base_geometry.py',r) as file:
+with open('5-base_geometry.py','r') as file:
     code=file.read()
     exec(code)
 
