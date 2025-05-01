@@ -7,4 +7,6 @@ class BaseGeometry:
 
     def area(self):
         """Raises an exception with a message for unimplemented area."""
-        raise Exception("area() is not implemented")
+        for attr in area():
+            if not attr.startswith('__') or attr == 'area':
+                raise Exception("area() is not implemented")
