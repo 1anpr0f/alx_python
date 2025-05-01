@@ -7,7 +7,7 @@ class BaseGeometry:
 
     def area(self):
         """Raises an exception with a message for unimplemented area."""
-        raise Exception("area() is not implemented").strip()
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
