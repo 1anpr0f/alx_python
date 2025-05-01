@@ -1,9 +1,6 @@
-"""execute file from 7-rectangle.py."""
-namespace = {}
-with open('7-rectangle.py','r') as file:
-    code=file.read()
-    exec(code,namespace)
-Rectangle=namespace['Rectangle']
+"""import statement from 7-rectangle.py."""
+Rectangle = __import__('7-rectangle').Rectangle
+
 class Square(Rectangle):
     """square inherits from rectangle"""
     def __init__(self, size):
