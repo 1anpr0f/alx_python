@@ -1,6 +1,7 @@
-#!/usr/bin/python3
-from 5-base_geometry import BaseGeometry
-
+"""read the file from 5-base_geometry.py"""
+with open('5-base_geometry.py',r) as file:
+    code=file.read()
+    exec(code)
 
 class Rectangle(BaseGeometry):
     """Represents a rectangle, inherits from BaseGeometry."""
