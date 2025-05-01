@@ -1,19 +1,27 @@
 """create a function"""
 def is_kind_of_class(obj, a_class):
     """
-    Checks if the object is an instance of a class that inherited (directly or indirectly)
-    from the specified class (a_class).
+    Determine whether an object is an instance of a subclass of a specified class.
 
-    This function returns:
-    - True if the object is an instance of a class that inherits from a_class, but not a direct
-      instance of a_class itself.
-    - False if the object is a direct instance of a_class or is not related to it.
+    This function returns True if the object is an instance of a class that inherits 
+    (either directly or indirectly) from the specified class `a_class`, but not if the 
+    object is a direct instance of `a_class` itself.
 
-    Parameters:
-    obj: The object to check.
-    a_class: The class to compare against.
+    Args:
+        obj (Any): The object to be checked.
+        a_class (type): The class to compare against.
 
     Returns:
-    bool: True if the object is an instance of a class that inherits from a_class, otherwise False.
+        bool: True if `obj` is an instance of a subclass of `a_class` (excluding direct instances),
+              False otherwise.
+
+    Example:
+        >>> class Animal: pass
+        >>> class Dog(Animal): pass
+        >>> is_kind_of_class(Dog(), Animal)
+        True
+        >>> is_kind_of_class(Animal(), Animal)
+        False
     """
     return isinstance(obj, a_class) and type(obj) != a_class
+
