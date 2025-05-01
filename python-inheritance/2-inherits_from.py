@@ -1,5 +1,7 @@
 """create a function"""
 def is_kind_of_class(obj, a_class):
+    if isinstance(obj, a_class) and type(obj) != a_class:
+        return True
     """
     Determine whether an object is an instance of a subclass of a specified class.
 
@@ -23,5 +25,5 @@ def is_kind_of_class(obj, a_class):
         >>> is_kind_of_class(Animal(), Animal)
         False
     """
-    return isinstance(obj, a_class) and type(obj) != a_class
+    
 
