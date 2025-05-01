@@ -1,19 +1,20 @@
-"""create a function."""
-def is_kind_of_class(obj, a_class):
-    
-    """
-    Determine if an object is an instance of a subclass of the specified class.
+#!/usr/bin/python3
+"""Defines the is_kind_of_class function."""
 
-    This function returns True if `obj` is an instance of a class that inherits
-    (directly or indirectly) from `a_class`, but is not a direct instance of `a_class`.
+
+def is_kind_of_class(obj, a_class):
+    """
+    Return True if obj is an instance of a subclass of a_class.
+
+    The function returns True only if obj is an instance of a class that
+    inherits from a_class (directly or indirectly), but not if obj is a direct
+    instance of a_class itself.
 
     Args:
-        obj (Any): The object to check.
-        a_class (type): The class to compare inheritance against.
+        obj: The object to check.
+        a_class: The reference class.
 
     Returns:
-        bool: True if `obj` is an instance of a subclass of `a_class`, False otherwise.
+        bool: True if obj is an instance of a subclass of a_class, else False.
     """
     return isinstance(obj, a_class) and type(obj) is not a_class
-
-
