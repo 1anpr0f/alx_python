@@ -167,7 +167,7 @@ class Rectangle(Base):
         """
         for _ in range(self.__y):
             print(" ")
-        if self.__x > 0:
+        if self.__x != 0:
             line =" "+'#'*self.__width
         else:
             line ='#'*self.__width
