@@ -163,14 +163,13 @@ class Rectangle(Base):
         """
         return self.__height * self.__width
     def display(self):
-        """print output of # in the multiple of width 
-        """
-        if self.__y > 0 :
+        """Print the Rectangle instance with '#' considering x and y offsets."""
+        if self.__y > 0:
             for _ in range(self.__y):
-                print(f'{" "}')
-                line =' '*self.__x+'#'*self.__width
-                for _ in range(self.__height):
-                    print(line)
+                print("")  # Print vertical offset for y
+
+        for _ in range(self.__height):
+            print(" " * self.__x + "#" * self.__width)
     def __str__(self):
         """
         printing out a string output
