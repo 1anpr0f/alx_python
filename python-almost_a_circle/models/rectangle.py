@@ -168,9 +168,9 @@ class Rectangle(Base):
         if self.__y > 0 :
             for _ in range(self.__y):
                 print(f'{" "}')
-        line =' '*self.__x+'#'*self.__width
-        for _ in range(self.__height):
-            print(line)
+                line =' '*self.__x+'#'*self.__width
+                for _ in range(self.__height):
+                    print(line)
     def __str__(self):
         """
         printing out a string output
