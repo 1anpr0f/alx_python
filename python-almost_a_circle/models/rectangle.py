@@ -66,9 +66,7 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be >= 0")
-        if self.__width == None:
-            print()
-        print("OK")
+       
         self.__width = value
 
     @property
@@ -97,9 +95,7 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be >= 0")
-        if self.__height == None:
-            print()
-        print("OK")
+       
         self.__height = value
 
     @property
@@ -128,9 +124,7 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value <= 0:
             raise ValueError("x must be >= 0")
-        if self.__x == None:
-            print()
-        print("OK")
+       
         self.__x = value
 
     @property
@@ -159,9 +153,15 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value <= 0:
             raise ValueError("y must be >= 0")
-        if self.__y == None:
-            print()
-        print("OK")
         self.__y = value
 if __name__ == "__main__":
-    print("OK")
+
+
+    r1 = Rectangle(10, 2)
+    print(r1.id)
+
+    r2 = Rectangle(2, 10)
+    print(r2.id)
+
+    r3 = Rectangle(10, 2, 0, 0, 12)
+    print(r3.id)
