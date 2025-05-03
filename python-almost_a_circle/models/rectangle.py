@@ -163,6 +163,8 @@ class Rectangle(Base):
         """
         return self.__height * self.__width
     def display(self):
+        """print output of # in the multiple of width 
+        """
         line = '#'*self.__width
         for _ in range(self.__height):
             print(line)
