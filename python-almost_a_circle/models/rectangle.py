@@ -1,64 +1,153 @@
-"""use import statement __import__(file).name."""
-from base import Base
+# Dynamically load the Base class from base.py
+namespace = {}
+with open('base.py', 'r') as file:
+    code = file.read()
+    exec(code, namespace)
+Base = namespace['Base']
+
+
 class Rectangle(Base):
     """
-   Rectangle class that inherits from Base.
+    Rectangle class that inherits from Base.
+    Manages the dimensions and position of a rectangle shape.
 
-    Args:
-        width (int): Width of the rectangle
-        height (int): Height of the rectangle
-        x (int): x position
-        y (int): y position
-        id (int): ID from Base
+    Attributes:
+        width (int): The width of the rectangle. Must be >= 0.
+        height (int): The height of the rectangle. Must be >= 0.
+        x (int): The x-coordinate of the rectangle. Must be >= 0.
+        y (int): The y-coordinate of the rectangle. Must be >= 0.
+        id (int): Inherited from Base, unique identifier for each instance.
     """
-    def __init__(self,width,height,x=0,y=0,id):
+
+    def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Initialize a rectangle instance.
+        Initialize a new Rectangle instance.
+
+        Args:
+            width (int): Width of the rectangle.
+            height (int): Height of the rectangle.
+            x (int, optional): Horizontal position. Defaults to 0.
+            y (int, optional): Vertical position. Defaults to 0.
+            id (int, optional): Unique ID. If None, an auto-incremented ID is used.
+
+        Raises:
+            TypeError: If width, height, x, or y are not integers.
+            ValueError: If width, height, x, or y are negative.
         """
         super().__init__(id)
-        self.width= width
-        self.height=height
-        self.x =x
-        self.y=y
-        
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+
     @property
     def width(self):
+        """
+        Getter for the width attribute.
+
+        Returns:
+            int: The width of the rectangle.
+        """
         return self.__width
+
     @width.setter
-    def width(self,value):
+    def width(self, value):
+        """
+        Setter for the width attribute.
+
+        Args:
+            value (int): New width value.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is negative.
+        """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        if not isinstance(value,int):
-            raise TypeError("the with must be an integer")
-        self.__width=value
+        self.__width = value
+
     @property
     def height(self):
+        """
+        Getter for the height attribute.
+
+        Returns:
+            int: The height of the rectangle.
+        """
         return self.__height
+
     @height.setter
-    def height(self,value):
+    def height(self, value):
+        """
+        Setter for the height attribute.
+
+        Args:
+            value (int): New height value.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is negative.
+        """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        if not isinstance(value,int):
-            raise TypeError("the with must be an integer")
-        self.__height=value
+        self.__height = value
+
     @property
     def x(self):
+        """
+        Getter for the x position attribute.
+
+        Returns:
+            int: The x position of the rectangle.
+        """
         return self.__x
+
     @x.setter
-    def x(self,value):
+    def x(self, value):
+        """
+        Setter for the x position attribute.
+
+        Args:
+            value (int): New x-coordinate.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is negative.
+        """
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-        if not isinstance(value,int):
-            raise TypeError("the with must be an integer")
-        self.__x=value
+        self.__x = value
+
     @property
     def y(self):
+        """
+        Getter for the y position attribute.
+
+        Returns:
+            int: The y position of the rectangle.
+        """
         return self.__y
+
     @y.setter
-    def y(self,value):
+    def y(self, value):
+        """
+        Setter for the y position attribute.
+
+        Args:
+            value (int): New y-coordinate.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is negative.
+        """
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        if not isinstance(value,int):
-            raise TypeError("the with must be an integer")
-        self.__y=value
-        
+        self.__y = value
