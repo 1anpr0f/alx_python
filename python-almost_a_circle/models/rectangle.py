@@ -1,12 +1,26 @@
 """use import statement __import__(file).name."""
-Base = __import__('models.base').Base
+from base import Base
 class Rectangle(Base):
-    def __init__(self,width,height,x=0,y=0,id-None):
-        super().__init__(id=None)
+    """
+   Rectangle class that inherits from Base.
+
+    Args:
+        width (int): Width of the rectangle
+        height (int): Height of the rectangle
+        x (int): x position
+        y (int): y position
+        id (int): ID from Base
+    """
+    def __init__(self,width,height,x=0,y=0,id):
+        """
+        Initialize a rectangle instance.
+        """
+        super().__init__(id)
         self.width= width
         self.height=height
         self.x =x
         self.y=y
+        
     @property
     def width(self):
         return self.__width
