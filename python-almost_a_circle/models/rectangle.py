@@ -172,7 +172,7 @@ class Rectangle(Base):
         """
         printing out a string output
         """
-        return f"[Rectangle]{id}{self.__x}/{self.__y}-{self.__width}/{self.__height}"
+        return f"[Rectangle] {id} {self.__x}/{self.__y} - {self.__width}/{self.__height}"
         
         
 if __name__ == "__main__":
