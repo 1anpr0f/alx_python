@@ -162,7 +162,10 @@ class Rectangle(Base):
             float:area of the rectangle
         """
         return self.__height * self.__width
-    
+    def display(self):
+        line = '#'*self.__width
+        for _ in range(self.__height):
+            print(line)
         
 if __name__ == "__main__":
 
