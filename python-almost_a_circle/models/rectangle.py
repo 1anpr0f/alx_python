@@ -175,20 +175,24 @@ class Rectangle(Base):
         printing out a string output
         """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
-        add the id,width,height,x and y to args
+        Update attributes using *args or **kwargs.
+
+        Args:
+        *args: No-keyword arguments in the order:
+            id, width, height, x, y.
+        **kwargs: Keyword arguments where key is the attribute name.
         """
-        if len(args) >= 1:
-            self.id = args[0]  # 1st argument is id
-        if len(args) >= 2:
-            self.width = args[1]  # 2nd argument is width
-        if len(args) >= 3:
-            self.height = args[2]  # 3rd argument is height
-        if len(args) >= 4:
-            self.x = args[3]  # 4th argument is x
-        if len(args) >= 5:
-            self.y = args[4]  # 5th argument is y
+        attr_order = ['id', 'width', 'height', 'x', 'y']
+        if args and len(args) > 0:
+            for i, arg in enumerate(args):
+                if i < len(attr_order):
+                    setattr(self, attr_order[i], arg)
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
         
         
 if __name__ == "__main__":
