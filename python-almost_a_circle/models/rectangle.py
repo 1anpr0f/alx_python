@@ -1,9 +1,10 @@
-# Dynamically load the Base class from base.py
+"""Dynamically load the Base class from base.py"""
 namespace = {}
 with open('base.py', 'r') as file:
     code = file.read()
     exec(code, namespace)
 Base = namespace['Base']
+
 
 
 class Rectangle(Base):
