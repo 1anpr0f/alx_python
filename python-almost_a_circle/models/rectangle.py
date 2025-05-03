@@ -179,16 +179,11 @@ class Rectangle(Base):
         """
         add the id,width,height,x and y to args
         """
-        if id != None:
-            self.id= args[0]
-        if self.__width >= 0:
-            self.width =args[1]
-        if self.__height >= 0:
-            self.height=args[2]
-        if self.__x >= 0:
-            self.x=args[3]
-        if self.__y >= 0:
-            self.y=args[4]
+        self.id= args[0]
+        self.__width =args[1]
+        self.__height=args[2]
+        self.__x=args[3]
+        self.__y=args[4]
         
         
 if __name__ == "__main__":
