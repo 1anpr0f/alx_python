@@ -175,6 +175,17 @@ class Rectangle(Base):
         printing out a string output
         """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+    def update(self, *args):
+        if id != None:
+            self.id= args[0]
+        if self.__width >= 0:
+            self.width =args[1]
+        if self.__height >= 0:
+            self.height=args[2]
+        if self.__x >= 0:
+            self.x=args[3]
+        if self.__y >= 0:
+            self.y=args[4]
         
         
 if __name__ == "__main__":
