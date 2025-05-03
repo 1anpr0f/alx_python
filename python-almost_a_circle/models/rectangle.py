@@ -152,4 +152,5 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 if __name__ == "__main__":
-    print("ok")
+    if Rectangle() !=  None:
+        print("ok")
