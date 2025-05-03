@@ -1,4 +1,6 @@
-"""import from base.py"""
+"""
+Rectangle module that defines the Rectangle class, inheriting from Base.
+"""
 from base import Base
 
 
