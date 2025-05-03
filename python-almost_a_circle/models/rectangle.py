@@ -19,7 +19,7 @@ class Rectangle(Base):
         id (int): Inherited from Base, unique identifier for each instance.
     """
 
-    def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width=0, height=0, x=0, y=0, id=None):
         """
         Initialize a new Rectangle instance.
 
@@ -64,7 +64,7 @@ class Rectangle(Base):
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
        
         self.__width = value
@@ -93,7 +93,7 @@ class Rectangle(Base):
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
        
         self.__height = value
@@ -122,7 +122,7 @@ class Rectangle(Base):
         """
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("x must be >= 0")
        
         self.__x = value
@@ -151,7 +151,7 @@ class Rectangle(Base):
         """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 if __name__ == "__main__":
