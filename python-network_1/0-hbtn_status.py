@@ -6,4 +6,5 @@ response = urllib.request.Request(url)
 """send the request"""
 resp=urllib.request.urlopen(response)
 respdata = resp.read()#reads the response
+
 print(respdata)
